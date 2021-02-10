@@ -1,15 +1,15 @@
 # Overview
 
-This library implements a class similar to the [GNU Scientific Library](https://www.gnu.org/software/gsl/) `matrix_view`. It points to a section of a C++ `vector` and interprets that section as a matrix. Matrix manipulations can then be done as usual. The matrices are [column-major](https://en.wikipedia.org/wiki/Matrix_representation). See documentation for the available methods.
+This library implements a class similar to the [GNU Scientific Library](https://www.gnu.org/software/gsl/) `matrix_view`. It points to a section of a C++ `vector` and interprets that section as a matrix. Matrix manipulations can then be done as usual. The matrices are [column-major](https://en.wikipedia.org/wiki/Matrix_representation). See [documentation](https://bayesicresearch.org/software/bayesicmatrix/) for the available methods. Matrix dimensions are checked when necessary, unless the `-DPKG_DEBUG_OFF` compiler flag is set.
 
 ## Dependencies
 
 ### BLAS/LAPACK
 
-Interfaces to a subset of [BLAS](https://www.netlib.org/blas/) and [LAPACK](https://www.netlib.org/lapack/) routines is available. People prefer a variety of implementations of these libraries. I have to possibilities built-in:
+Interfaces to a subset of [BLAS](https://www.netlib.org/blas/) and [LAPACK](https://www.netlib.org/lapack/) routines is available. People prefer a variety of implementations of these libraries. I have two built-in possibilities:
 
 - Using the libraries included with [R](https://cran.r-project.org/), useful for writing R extensions.
-- Using a stand-alone library, in particular Intel's [Math Kernel Library](https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/onemkl.html). To use this option, include the `-DNO_REXT` flag while compiling and make sure MKL is reachable by the compiler.
+- Using a stand-alone library, in particular Intel's [Math Kernel Library](https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/onemkl.html). To use this option, include the `-DNO_REXT` compilation flag and make sure MKL is visible to the compiler.
 
 Using other libraries is also possible, but you may need to modify the `#include` statement for BLAS and LAPACK. If you want to use CBLAS, you may also need to modify routine names.
 
