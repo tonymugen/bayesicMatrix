@@ -36,7 +36,11 @@
 #include <algorithm>
 #include <cmath>
 #include <limits>
+#include <climits>
 #include <utility>
+
+#include "matrixView.hpp"
+#include "../bayesicUtilities/index.hpp"
 
 // A couple of possible sources of BLAS and LAPACK
 #if defined NO_REXT
@@ -46,9 +50,6 @@
 #include <R_ext/Lapack.h>
 #include <R_ext/BLAS.h>
 #endif
-
-#include "matrixView.hpp"
-#include "../bayesicUtilities/index.hpp"
 
 using std::vector;
 using std::string;
