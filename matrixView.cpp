@@ -35,7 +35,7 @@
 #include <cstring>
 #include <algorithm>
 #include <cmath>
-#include <climits>
+#include <limits>
 #include <utility>
 
 // A couple of possible sources of BLAS and LAPACK
