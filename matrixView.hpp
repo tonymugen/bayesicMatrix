@@ -27,14 +27,13 @@
  *
  */
 
-#ifndef matrixView_hpp
-#define matrixView_hpp
+#pragma once
 
 #include <cstddef>
 #include <vector>
 #include <string>
 
-#include "../bayesicUtilities/index.hpp"
+#include "../bayesicUtilities/include/index.hpp"
 
 using std::vector;
 using std::string;
@@ -1329,5 +1328,4 @@ namespace BayesicSpace {
 		size_t Ncol_;
 	};
 }
-#endif /* matrixView_hpp */
 

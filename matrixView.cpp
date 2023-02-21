@@ -40,7 +40,7 @@
 #include <utility>
 
 #include "matrixView.hpp"
-#include "../bayesicUtilities/index.hpp"
+#include "../bayesicUtilities/include/index.hpp"
 
 // A couple of possible sources of BLAS and LAPACK
 #if defined NO_REXT
